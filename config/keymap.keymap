@@ -20,11 +20,11 @@
 
         layer_0 {
             bindings = <
-&trans  &trans     &trans    &trans    &trans    &trans                                 &trans       &trans    &trans     &trans    &trans                &trans
-&trans  &kp Q      &kp W     &kp E     &kp R     &kp T                                  &kp Y        &kp U     &kp I      &kp O     &kp P                 &trans
-&trans  &kp A      &kp S     &kp D     &kp F     &kp G        &trans       &trans       &kp H        &kp J     &kp K      &kp L     &kp SEMI              &kp SQT
-&trans  &kp Z      &kp X     &kp C     &kp V     &kp B        &trans       &kp RET      &kp N        &kp M     &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
-&trans  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &bootloader  &bootloader  &lt 3 ENTER  &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL             &kp RCTRL
+&trans  &trans            &trans    &trans    &trans            &trans                                 &trans       &trans    &trans     &trans    &trans                &trans
+&trans  &kp Q             &kp W     &kp E     &kp R             &kp T                                  &kp Y        &kp U     &kp I      &kp O     &kp P                 &trans
+&trans  &mt CAPSLOCK A    &kp S     &kp D     &kp F             &kp G        &trans       &trans       &kp H        &kp J     &kp K      &kp L     &kp SEMI              &kp SQT
+&trans  &mt LEFT_SHIFT Z  &kp X     &kp C     &kp V             &kp B        &lt 4 TAB    &kp RET      &kp N        &kp M     &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
+&trans  &kp LCTRL         &kp LGUI  &kp LALT  &lt 5 LANGUAGE_5  &lt 2 SPACE  &bootloader  &bootloader  &lt 3 ENTER  &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL             &kp RCTRL
             >;
         };
 
@@ -59,6 +59,36 @@
         };
 
         layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
