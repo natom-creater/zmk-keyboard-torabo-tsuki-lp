@@ -4,29 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        bt_clear_le {
-            bindings = <&bt BT_CLR>;
-            key-positions = <28 29>;
-        };
-
-        sys_reset_lt {
-            bindings = <&sys_reset>;
-            key-positions = <42 43 44>;
-        };
-
-        sys_reset_rt {
-            bindings = <&sys_reset>;
-            key-positions = <45 47 46>;
-        };
-
-        bt_clear_rt {
-            bindings = <&bt BT_CLR>;
-            key-positions = <32 33>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         win_shift_s: win_shift_s {
