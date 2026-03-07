@@ -30,11 +30,11 @@
 
         layer_1 {
             bindings = <
-&trans  &trans         &trans        &trans         &trans         &trans                        &trans  &trans        &trans        &trans        &trans  &trans
-&trans  &trans         &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)                  &trans  &kp LBKT      &kp RBKT      &trans        &trans  &trans
-&trans  &kp LS(SQT)    &kp LS(DLLR)  &kp LS(PRCNT)  &kp CARET      &trans        &trans  &trans  &trans  &kp LS(LPAR)  &kp LS(RPAR)  &kp BSLH      &trans  &trans
-&trans  &kp LS(EQUAL)  &kp LS(EXCL)  &kp AT         &kp LS(POUND)  &trans        &trans  &trans  &trans  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PIPE)  &trans  &trans
-&trans  &trans         &trans        &trans         &trans         &trans        &trans  &trans  &trans  &trans        &trans        &trans        &trans  &trans
+&trans  &trans     &trans           &trans                &trans                 &trans                  &trans  &trans                &trans                 &trans                &trans  &trans
+&trans  &trans     &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                  &trans  &kp LBKT              &kp RBKT               &trans                &trans  &trans
+&trans  &kp MINUS  &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NON_US_BACKSLASH  &trans  &trans
+&trans  &kp EQUAL  &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp POUND              &trans  &trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE              &trans  &trans
+&trans  &trans     &trans           &trans                &trans                 &trans  &trans  &trans  &trans  &trans                &trans                 &trans                &trans  &trans
             >;
         };
 
