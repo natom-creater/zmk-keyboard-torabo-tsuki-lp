@@ -7,22 +7,22 @@
     combos {
         compatible = "zmk,combos";
 
-        bt_clear {
+        bt_clear_le {
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
         };
 
-        sys_reset {
+        sys_reset_lt {
             bindings = <&sys_reset>;
             key-positions = <42 43 44>;
         };
 
-        sys_reset {
+        sys_reset_rt {
             bindings = <&sys_reset>;
             key-positions = <45 47 46>;
         };
 
-        bt_clear {
+        bt_clear_rt {
             bindings = <&bt BT_CLR>;
             key-positions = <32 33>;
         };
