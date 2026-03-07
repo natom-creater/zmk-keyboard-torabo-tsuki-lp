@@ -20,11 +20,11 @@
 
         layer_0 {
             bindings = <
-&trans  &trans            &trans    &trans    &trans            &trans                                       &trans       &trans  &trans     &trans            &trans                    &trans
-&trans  &kp Q             &kp W     &kp E     &kp R             &kp T                                        &kp Y        &kp U   &kp I      &kp O             &lt 6 P                   &trans
-&trans  &mt CAPSLOCK A    &kp S     &kp D     &kp F             &kp G        &trans          &trans          &kp H        &kp J   &kp K      &kp L             &lt 1 SEMI                &trans
-&trans  &mt LEFT_SHIFT Z  &kp X     &kp C     &kp V             &kp B        &bootloader     &bootloader     &kp N        &kp M   &kp COMMA  &kp DOT           &mt RIGHT_SHIFT FSLH      &trans
-&trans  &kp LCTRL         &kp LGUI  &kp LALT  &lt 5 LANGUAGE_3  &lt 2 SPACE  &bt BT_CLR_ALL  &bt BT_CLR_ALL  &lt 3 ENTER  &trans  &trans     &mt ESCAPE ENTER  &mt ESCAPE RIGHT_CONTROL  &trans
+&trans  &trans            &trans    &trans    &trans            &trans                                      &trans      &trans  &trans     &trans            &trans                    &trans
+&trans  &kp Q             &kp W     &kp E     &kp R             &kp T                                       &kp Y       &kp U   &kp I      &kp O             &lt 6 P                   &trans
+&trans  &mt CAPSLOCK A    &kp S     &kp D     &kp F             &kp G       &trans          &trans          &kp H       &kp J   &kp K      &kp L             &lt 1 SEMI                &trans
+&trans  &mt LEFT_SHIFT Z  &kp X     &kp C     &kp V             &kp B       &bootloader     &bootloader     &kp N       &kp M   &kp COMMA  &kp DOT           &mt RIGHT_SHIFT FSLH      &trans
+&trans  &kp LCTRL         &kp LGUI  &kp LALT  &lt 5 LANGUAGE_3  &sys_reset  &bt BT_CLR_ALL  &bt BT_CLR_ALL  &sys_reset  &trans  &trans     &mt ESCAPE ENTER  &mt ESCAPE RIGHT_CONTROL  &trans
             >;
         };
 
