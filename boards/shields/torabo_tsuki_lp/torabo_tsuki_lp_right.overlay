@@ -2,17 +2,17 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-/* トラックボールの挙動設定 */
+/* 1. ポインティングリスナーの設定 */
+/* ここでトラックボールの動きをフックしてレイヤー5を起動します */
 &pointing_listener {
-    /* XY反転設定を維持しつつ、オートマウスレイヤー(5)を2秒間起動する設定を追加 */
     input-processors = 
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_temp_layer 5 2000>;
 };
 
-/* オートマウスの除外キー設定（j, k, l, u, o以外を押すとレイヤー0に戻る） */
+/* 2. オートマウス除外キーの設定（j, k, l, u, o 以外で戻る） */
 &zip_temp_layer {
-    /* torabo-tsuki のキー配置に基づくポジション番号 */
+    /* キーポジション番号はご自身のレイアウトに合わせて微調整が必要な場合があります */
     excluded-positions = <
         17 // U 
         19 // O
@@ -22,12 +22,10 @@
     >;
 };
 
-/* トラックボール自体の設定 */
-&trackball {
-    automouse-layer = <5>;
-};
+/* エラーの原因だった &trackball / &trackball_0 ブロックは削除しました */
+/* リスナー側でレイヤー指定をしているため、ここがなくても動作します */
 
-/* 既存のレイアウト変換設定（そのまま維持） */
+/* 3. 既存のレイアウト変換設定（そのまま維持） */
 &size_s_transform {
     col-offset = <7>;
 };
