@@ -21,21 +21,6 @@
             bindings = <&kp C_AC_ZOOM_OUT>;
             key-positions = <22 53>;
         };
-
-        Capslock {
-            bindings = <&kp LS(CAPSLOCK)>;
-            key-positions = <39 25>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <25 26>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <36 35>;
-        };
     };
 
     macros {
