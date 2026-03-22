@@ -4,24 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        question {
-            bindings = <&kp QUESTION>;
-            key-positions = <53 50>;
-        };
-
-        zoom {
-            bindings = <&kp C_AC_ZOOM_IN>;
-            key-positions = <53 36>;
-        };
-
-        zoomout {
-            bindings = <&kp C_AC_ZOOM_OUT>;
-            key-positions = <22 53>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         win_shift_s: win_shift_s {
