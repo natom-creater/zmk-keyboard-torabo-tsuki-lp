@@ -48,7 +48,7 @@
         layer_2 {
             bindings = <
 &trans  &trans  &trans   &trans   &trans   &trans                  &trans           &trans  &trans  &trans     &trans           &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans                  &kp SLASH        &kp N7  &kp N8  &kp N9     &kp LS(SEMI)     &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans                  &kp SLASH        &kp N7  &kp N8  &kp N9     &kp KP_PLUS      &trans
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &trans  &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6     &kp MINUS        &trans
 &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &trans  &trans  &kp N0           &kp N1  &kp N2  &kp N3     &kp LS(MINUS)    &trans
 &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans  &kp DOT          &trans  &trans  &kp ENTER  &kp KP_MULTIPLY  &trans
@@ -57,11 +57,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans            &trans                  &trans            &trans                   &trans                                 &trans    &trans       &trans    &trans         &trans         &trans
-&trans  &kp LC(MINUS)     &kp LG(LC(LEFT_ARROW))  &kp LG(UP_ARROW)  &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(F4))                         &kp HOME  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp BACKSPACE  &trans
-&trans  &kp LS(LC(SEMI))  &kp LG(LEFT)            &kp LG(DOWN)      &kp LG(RIGHT)            &kp LC(LG(D))   &trans  &trans         &kp END   &kp LEFT     &kp DOWN  &kp RIGHT      &kp DELETE     &trans
-&trans  &trans            &trans                  &trans            &trans                   &kp LG(TAB)     &trans  &kp LG(LS(S))  &trans    &trans       &trans    &trans         &trans         &trans
-&trans  &trans            &trans                  &trans            &trans                   &trans          &trans  &kp DEL        &trans    &trans       &trans    &trans         &trans         &trans
+&trans  &trans               &trans                  &trans            &trans                   &trans                                 &trans    &trans       &trans    &trans         &trans         &trans
+&trans  &kp LC(MINUS)        &kp LG(LC(LEFT_ARROW))  &kp LG(UP_ARROW)  &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(F4))                         &kp HOME  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp BACKSPACE  &trans
+&trans  &kp LS(LC(KP_PLUS))  &kp LG(LEFT)            &kp LG(DOWN)      &kp LG(RIGHT)            &kp LC(LG(D))   &trans  &trans         &kp END   &kp LEFT     &kp DOWN  &kp RIGHT      &kp DELETE     &trans
+&trans  &trans               &trans                  &trans            &trans                   &kp LG(TAB)     &trans  &kp LG(LS(S))  &trans    &trans       &trans    &trans         &trans         &trans
+&trans  &trans               &trans                  &trans            &trans                   &trans          &trans  &kp DEL        &trans    &trans       &trans    &trans         &trans         &trans
             >;
         };
 
