@@ -4,7 +4,14 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        a {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <49 50>;
+        };
+    };
 
     macros {
         win_shift_s: win_shift_s {
@@ -50,11 +57,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans        &trans            &trans         &trans                         &trans  &trans       &trans    &trans         &trans    &trans
-&trans  &trans  &trans        &kp LG(UP_ARROW)  &trans         &trans                         &trans  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp HOME  &trans
-&trans  &trans  &kp LG(LEFT)  &kp LG(DOWN)      &kp LG(RIGHT)  &trans  &trans  &trans         &trans  &kp LEFT     &kp DOWN  &kp RIGHT      &kp END   &trans
-&trans  &trans  &trans        &trans            &trans         &trans  &trans  &kp LG(LS(S))  &trans  &trans       &trans    &trans         &trans    &trans
-&trans  &trans  &trans        &trans            &trans         &trans  &trans  &kp DEL        &trans  &trans       &trans    &trans         &trans    &trans
+&trans  &trans  &trans                  &trans            &trans                   &trans                                 &trans    &trans       &trans    &trans         &trans         &trans
+&trans  &trans  &kp LG(LC(LEFT_ARROW))  &kp LG(UP_ARROW)  &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(F4))                         &kp HOME  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp BACKSPACE  &trans
+&trans  &trans  &kp LG(LEFT)            &kp LG(DOWN)      &kp LG(RIGHT)            &kp LC(LG(D))   &trans  &trans         &kp END   &kp LEFT     &kp DOWN  &kp RIGHT      &kp DELETE     &trans
+&trans  &trans  &trans                  &trans            &trans                   &kp LG(TAB)     &trans  &kp LG(LS(S))  &trans    &trans       &trans    &trans         &trans         &trans
+&trans  &trans  &trans                  &trans            &trans                   &trans          &trans  &kp DEL        &trans    &trans       &trans    &trans         &trans         &trans
             >;
         };
 
