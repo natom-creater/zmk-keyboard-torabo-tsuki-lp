@@ -4,19 +4,29 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    // --- 追加：ホールド判定の設定 ---
+    // 1. behaviors ブロック：ここがエラーの主な原因になりやすい場所です
     behaviors {
-        &mt {
+        // &mt (Mod-Tap) の挙動変更
+        soft_mt: soft_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             tapping-term-ms = <300>;
-            quick-tap-ms = <0>;     // quick-tapを無効化
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
-        &lt {
+        // &lt (Layer-Tap) の挙動変更
+        soft_lt: soft_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             tapping-term-ms = <300>;
-            quick-tap-ms = <0>;     // quick-tapを無効化
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
         };
     };
-    // ----------------------------
 
+    // 2. combos ブロック
     combos {
         compatible = "zmk,combos";
 
@@ -26,6 +36,7 @@
         };
     };
 
+    // 3. macros ブロック
     macros {
         win_shift_s: win_shift_s {
             compatible = "zmk,behavior-macro";
@@ -35,6 +46,7 @@
         };
     };
 
+    // 4. keymap ブロック
     keymap {
         compatible = "zmk,keymap";
 
