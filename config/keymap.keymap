@@ -92,10 +92,20 @@
         layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans             &trans    &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp LC(MINUS)      &mkp MB4  &trans    &mkp MB5  &kp PAGE_UP    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp LC(MINUS)      &mkp MB4  &to 6     &mkp MB5  &kp PAGE_UP    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(SEMICOLON)  &mkp MB1  &mkp MB3  &mkp MB2  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans    &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans    &trans    &trans    &trans         &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
