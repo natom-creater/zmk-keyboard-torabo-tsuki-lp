@@ -91,11 +91,11 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans             &trans    &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp LC(MINUS)      &mkp MB4  &to 6     &mkp MB5  &kp PAGE_UP    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(SEMICOLON)  &mkp MB1  &mkp MB3  &mkp MB2  &kp PAGE_DOWN  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans    &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans    &trans    &trans    &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans             &trans     &trans     &trans     &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &kp LC(MINUS)      &mkp MB4   &to 6      &mkp MB5   &kp PAGE_UP    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp LC(SEMICOLON)  &mkp MB1   &mkp MB3   &mkp MB2   &kp PAGE_DOWN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(A)  &kp LC(C)          &kp LC(T)  &kp LC(V)  &kp ENTER  &kp LC(W)      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans             &trans     &trans     &trans     &trans         &trans
             >;
         };
 
