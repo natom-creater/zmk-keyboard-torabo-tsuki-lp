@@ -1,13 +1,23 @@
 / {
     behaviors {
-        // ここに書きたい内容をすべて書く
-        &mt {
+        // 標準の mt (Mod-Tap) を 400ms に設定
+        mt: mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             tapping-term-ms = <400>;
             quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
-        &lt {
+
+        // 標準の lt (Layer-Tap) を 400ms に設定
+        lt: lt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             tapping-term-ms = <400>;
             quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
         };
     };
 };
