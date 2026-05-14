@@ -54,7 +54,7 @@
 &trans  &trans            &trans            &trans            &trans            &trans                  &trans  &trans                 &trans             &trans                   &trans  &trans
 &trans  &kp LS(N9)        &trans            &trans            &trans            &trans                  &trans  &kp RIGHT_BRACKET      &kp BACKSLASH      &trans                   &trans  &trans
 &trans  &kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        &kp LS(N8)        &trans  &trans  &trans  &trans  &kp LS(N8)             &kp LS(N9)         &kp RS(INTERNATIONAL_1)  &trans  &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &trans  &trans  &trans  &trans  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &kp LS(INTERNATIONAL_4)  &trans  &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &trans  &trans  &trans  &trans  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &kp EQUAL                &trans  &trans
 &trans  &trans            &trans            &trans            &trans            &trans  &trans  &trans  &trans  &trans                 &trans             &trans                   &trans  &trans
             >;
         };
