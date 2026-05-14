@@ -1,8 +1,8 @@
 #include <custom.dtsi>
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include "custom.dtsi"  // ここを "" に変更
 
 / {
     // 1. behaviors ブロック：ここがエラーの主な原因になりやすい場所です
