@@ -1,0 +1,13 @@
+/ {
+    behaviors {
+        // ここに書きたい内容をすべて書く
+        &mt {
+            tapping-term-ms = <400>;
+            quick-tap-ms = <0>;
+        };
+        &lt {
+            tapping-term-ms = <400>;
+            quick-tap-ms = <0>;
+        };
+    };
+};
