@@ -1,22 +1,23 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
+    /* 
+     * Behaviorとしての定義ではなく、
+     * 直接 input-processors で使えるように定義します。
+     */
+    ib_scroll_report: ib_scroll_report {
+        compatible = "zmk,input-processor-if-layer";
+        #input-processor-cells = <2>;
+        bindings = <&scroller>;
+    };
+
     behaviors {
-        // スクロール挙動の定義
         scroller: scroller {
             compatible = "zmk,behavior-input-two-axis-scroll";
             #binding-cells = <0>;
             trigger-period-ms = <12>;
             type = "wheel";
-            scale = <16>; 
-        };
-
-        // レイヤー判定のプロセッサ定義
-        ib_scroll_report: ib_scroll_report {
-            compatible = "zmk,input-behavior-if-layer";
-            #binding-cells = <2>;          // Behaviorとして使うための設定
-            #input-processor-cells = <2>;  // プロセッサとして使うための設定（これが必要でした）
-            bindings = <&scroller>;
+            scale = <16>;
         };
     };
 };
