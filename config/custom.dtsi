@@ -1,29 +1,8 @@
-/* 念のためインクルードは残します */
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
     behaviors {
-        // 標準の &mt (Mod-Tap) を 400ms に設定
-        mod_tap: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <400>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        // 標準の &lt (Layer-Tap) を 400ms に設定
-        layer_tap: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <400>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-
-        // スクロール用 Behavior
+        // スクロール設定
         scroller: scroller {
             compatible = "zmk,behavior-input-two-axis-scroll";
             #binding-cells = <0>;
@@ -31,28 +10,27 @@
             type = "wheel";
             scale = <16>;
         };
-
-        /* 
-         * ib_if_layer が未定義と言われるのを防ぐため、
-         * ここで明示的にプロセッサの挙動を定義します
-         */
-        ib_if_layer_6: ib_if_layer_6 {
-            compatible = "zmk,input-behavior-if-layer";
-            #binding-cells = <2>;
-            bindings = <&scroller>; // 条件一致時に scroller を実行
-        };
     };
+
+    /* レイヤー6のときだけ scroller に変換する定義 */
+    ib_scroll_report: ib_scroll_report {
+        compatible = "zmk,input-behavior-if-layer";
+        #binding-cells = <2>;
+        bindings = <&scroller>;
+    };
+};
+
+/* 
+ * トラックボールのリスナー設定
+ * 既存の定義（&input_listener）に対して設定を上書き・追加します
+ */
+&input_listener {
+    // 除外キー
+    exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
 
     /* 
-     * input_listener ノード。
-     * 後続のスニペットで定義される内容とマージされます。
+     * 第一引数：対象レイヤー (6)
+     * 第二引数：不一致時の挙動 (0 = 何もしない。これにより通常のマウス移動が維持される)
      */
-    input_listener: input_listener {
-        // 除外キーの設定
-        exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
-        
-        // 自前で定義した ib_if_layer_6 を使用
-        // 第1引数にレイヤー番号(6)、第2引数に該当しない時の動作(なし=0)を指定
-        input-processors = <&ib_if_layer_6 6 0>;
-    };
+    input-processors = <&ib_scroll_report 6 0>;
 };
