@@ -1,4 +1,4 @@
-/* レイヤー判定機能を有効にするためにインクルードを追加 */
+/* 念のためインクルードは残します */
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
@@ -31,6 +31,16 @@
             type = "wheel";
             scale = <16>;
         };
+
+        /* 
+         * ib_if_layer が未定義と言われるのを防ぐため、
+         * ここで明示的にプロセッサの挙動を定義します
+         */
+        ib_if_layer_6: ib_if_layer_6 {
+            compatible = "zmk,input-behavior-if-layer";
+            #binding-cells = <2>;
+            bindings = <&scroller>; // 条件一致時に scroller を実行
+        };
     };
 
     /* 
@@ -41,8 +51,8 @@
         // 除外キーの設定
         exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
         
-        // レイヤー6ならスクロール、それ以外は通常移動
-        // 前の行でインクルードしたことで &ib_if_layer が使えるようになります
-        input-processors = <&ib_if_layer 6 &scroller>;
+        // 自前で定義した ib_if_layer_6 を使用
+        // 第1引数にレイヤー番号(6)、第2引数に該当しない時の動作(なし=0)を指定
+        input-processors = <&ib_if_layer_6 6 0>;
     };
 };
