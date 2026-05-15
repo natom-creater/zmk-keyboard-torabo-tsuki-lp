@@ -20,7 +20,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        // スクロール用 Behavior (レイヤー6用)
+        // スクロール用 Behavior
         scroller: scroller {
             compatible = "zmk,behavior-input-two-axis-scroll";
             #binding-cells = <0>;
@@ -31,8 +31,8 @@
     };
 };
 
-/* オートマウス除外とレイヤースクロールの統合設定 */
-&input_listener {
+/* ラベルではなく絶対パスで指定することでビルドエラーを回避 */
+&{/snippet-1/input-listener} {
     // 除外キーの設定
     exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
     
