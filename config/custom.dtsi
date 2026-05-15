@@ -2,22 +2,45 @@
 
 / {
     /* 
-     * Behaviorとしての定義ではなく、
-     * 直接 input-processors で使えるように定義します。
+     * input_processors ノード内に定義することで、
+     * システム側の Binding (zmk,input-processor-if-layer) と紐付けます。
      */
-    ib_scroll_report: ib_scroll_report {
-        compatible = "zmk,input-processor-if-layer";
-        #input-processor-cells = <2>;
-        bindings = <&scroller>;
+    input_processors {
+        ib_scroll_report: ib_scroll_report {
+            compatible = "zmk,input-processor-if-layer";
+            #input-processor-cells = <2>;
+            bindings = <&scroller>;
+        };
     };
 
     behaviors {
+        // スクロール挙動
         scroller: scroller {
             compatible = "zmk,behavior-input-two-axis-scroll";
             #binding-cells = <0>;
             trigger-period-ms = <12>;
             type = "wheel";
             scale = <16>;
+        };
+
+        // Mod-Tap 上書き
+        mod_tap: mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Layer-Tap 上書き
+        layer_tap: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
         };
     };
 };
