@@ -100,7 +100,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                     &kp UP_ARROW    &kp PAGE_UP  &mo 6      &kp PAGE_DOWN  &kp LC(MINUS)      &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp DOWN_ARROW  &mkp MB1     &mkp MB3   &mkp MB2       &kp LC(SEMICOLON)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(A)  &kp LC(C)       &kp LC(T)    &kp LC(V)  &kp ENTER      &kp LC(W)          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5        &trans       &trans     &kp LS(T)      &kp RCTRL          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans       &trans     &kp LS(T)      &trans             &trans
             >;
         };
 
