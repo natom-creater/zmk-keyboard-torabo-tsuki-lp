@@ -10,27 +10,26 @@
             type = "wheel";
             scale = <16>;
         };
-    };
 
-    /* レイヤー6のときだけ scroller に変換する定義 */
-    ib_scroll_report: ib_scroll_report {
-        compatible = "zmk,input-behavior-if-layer";
-        #binding-cells = <2>;
-        bindings = <&scroller>;
+        // レイヤー判定のプロセッサ定義
+        ib_scroll_report: ib_scroll_report {
+            compatible = "zmk,input-behavior-if-layer";
+            #binding-cells = <2>;
+            bindings = <&scroller>;
+        };
     };
-};
-
-/* 
- * トラックボールのリスナー設定
- * 既存の定義（&input_listener）に対して設定を上書き・追加します
- */
-&input_listener {
-    // 除外キー
-    exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
 
     /* 
-     * 第一引数：対象レイヤー (6)
-     * 第二引数：不一致時の挙動 (0 = 何もしない。これにより通常のマウス移動が維持される)
+     * 参照型（&label）ではなく、ノード定義型で記述することで
+     * どちらの手のビルドでもエラーを回避しつつ、
+     * 右手側のトラックボール（input_listener）に設定を流し込みます。
      */
-    input-processors = <&ib_scroll_report 6 0>;
+    input_listener: input_listener {
+        // 右手側のキー番号に合わせて除外キーを設定
+        // ※もし左手用と番号が異なる場合は、右手側の位置に合わせて調整してください
+        exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
+        
+        // レイヤー6でスクロール
+        input-processors = <&ib_scroll_report 6 0>;
+    };
 };
