@@ -1,3 +1,6 @@
+/* レイヤー判定機能を有効にするためにインクルードを追加 */
+#include <dt-bindings/zmk/input_transform.h>
+
 / {
     behaviors {
         // 標準の &mt (Mod-Tap) を 400ms に設定
@@ -31,14 +34,15 @@
     };
 
     /* 
-     * ラベルや絶対パスを使わず、既存ノードを「拡張」する形式に変更 
-     * input_listener ノードが後で定義されても、ここでの設定がマージされます
+     * input_listener ノード。
+     * 後続のスニペットで定義される内容とマージされます。
      */
     input_listener: input_listener {
         // 除外キーの設定
         exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
         
         // レイヤー6ならスクロール、それ以外は通常移動
+        // 前の行でインクルードしたことで &ib_if_layer が使えるようになります
         input-processors = <&ib_if_layer 6 &scroller>;
     };
 };
