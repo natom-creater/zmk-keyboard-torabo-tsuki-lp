@@ -2,34 +2,21 @@
 
 / {
     behaviors {
-        // スクロール設定
+        // スクロール速度などの設定
         scroller: scroller {
             compatible = "zmk,behavior-input-two-axis-scroll";
             #binding-cells = <0>;
             trigger-period-ms = <12>;
             type = "wheel";
-            scale = <16>;
+            // scaleを16程度に設定（overlayのscroll-speed 100相当にするには調整が必要かもしれません）
+            scale = <16>; 
         };
 
-        // レイヤー判定のプロセッサ定義
+        // レイヤー6の判定プロセッサ
         ib_scroll_report: ib_scroll_report {
             compatible = "zmk,input-behavior-if-layer";
             #binding-cells = <2>;
             bindings = <&scroller>;
         };
-    };
-
-    /* 
-     * 参照型（&label）ではなく、ノード定義型で記述することで
-     * どちらの手のビルドでもエラーを回避しつつ、
-     * 右手側のトラックボール（input_listener）に設定を流し込みます。
-     */
-    input_listener: input_listener {
-        // 右手側のキー番号に合わせて除外キーを設定
-        // ※もし左手用と番号が異なる場合は、右手側の位置に合わせて調整してください
-        exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
-        
-        // レイヤー6でスクロール
-        input-processors = <&ib_scroll_report 6 0>;
     };
 };
