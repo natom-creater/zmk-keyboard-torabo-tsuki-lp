@@ -9,10 +9,10 @@
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         
         /* 
-         * 【重要】自作の ib_scroll_report をここで呼び出します。
-         * これにより「レイヤー6の時だけ」という条件分岐が確実に機能します。
+         * モジュール標準のプロセッサを使用。
+         * 第一引数にレイヤー番号（6）を指定します。
          */
-        <&ib_scroll_report 6 0>,
+        <&zip_scroll_transform 6>,
 
         /* オートマウス(レイヤー5)設定 */
         <&zip_temp_layer 5 2000>;
