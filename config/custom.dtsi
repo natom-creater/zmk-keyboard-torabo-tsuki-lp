@@ -2,20 +2,20 @@
 
 / {
     behaviors {
-        // スクロール速度などの設定
+        // スクロール挙動の定義
         scroller: scroller {
             compatible = "zmk,behavior-input-two-axis-scroll";
             #binding-cells = <0>;
             trigger-period-ms = <12>;
             type = "wheel";
-            // scaleを16程度に設定（overlayのscroll-speed 100相当にするには調整が必要かもしれません）
             scale = <16>; 
         };
 
-        // レイヤー6の判定プロセッサ
+        // レイヤー判定のプロセッサ定義
         ib_scroll_report: ib_scroll_report {
             compatible = "zmk,input-behavior-if-layer";
-            #binding-cells = <2>;
+            #binding-cells = <2>;          // Behaviorとして使うための設定
+            #input-processor-cells = <2>;  // プロセッサとして使うための設定（これが必要でした）
             bindings = <&scroller>;
         };
     };
