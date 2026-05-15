@@ -29,13 +29,16 @@
             scale = <16>;
         };
     };
-};
 
-/* ラベルではなく絶対パスで指定することでビルドエラーを回避 */
-&{/snippet-1/input-listener} {
-    // 除外キーの設定
-    exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
-    
-    // プロセッサの設定（レイヤー6ならスクロール、それ以外は通常移動）
-    input-processors = <&ib_if_layer 6 &scroller>;
+    /* 
+     * ラベルや絶対パスを使わず、既存ノードを「拡張」する形式に変更 
+     * input_listener ノードが後で定義されても、ここでの設定がマージされます
+     */
+    input_listener: input_listener {
+        // 除外キーの設定
+        exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
+        
+        // レイヤー6ならスクロール、それ以外は通常移動
+        input-processors = <&ib_if_layer 6 &scroller>;
+    };
 };
