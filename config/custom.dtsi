@@ -1,7 +1,6 @@
 / {
-    /* 既存の behaviors ノードの中身を変更する */
     behaviors {
-        // 標準の &mt (Mod-Tap) のプロパティを直接上書き
+        // 標準の &mt (Mod-Tap) を 400ms に設定
         mod_tap: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -11,7 +10,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // 標準の &lt (Layer-Tap) のプロパティを直接上書き
+        // 標準の &lt (Layer-Tap) を 400ms に設定
         layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -20,5 +19,23 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
+
+        // スクロール用 Behavior (レイヤー6用)
+        scroller: scroller {
+            compatible = "zmk,behavior-input-two-axis-scroll";
+            #binding-cells = <0>;
+            trigger-period-ms = <12>;
+            type = "wheel";
+            scale = <16>;
+        };
     };
+};
+
+/* オートマウス除外とレイヤースクロールの統合設定 */
+&input_listener {
+    // 除外キーの設定
+    exclude-key-positions = <10 17 18 19 20 21 29 30 31 32 35 37 38 39 40 41 42>;
+    
+    // プロセッサの設定（レイヤー6ならスクロール、それ以外は通常移動）
+    input-processors = <&ib_if_layer 6 &scroller>;
 };
