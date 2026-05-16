@@ -31,20 +31,20 @@
     // 3. macros ブロック
 
     macros {
-        BT4_lay2: BT4_lay2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4>, <&macro_wait_time 200>, <&to 2>;
-
-            label = "BT4_LAY2";
-        };
-
         BT0_lay0: BT0_layer0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0>, <&macro_wait_time 200>, <&to 0>;
 
             label = "BT0_LAYER0";
+        };
+
+        BT4_lay2: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>, <&macro_wait_time 200>, <&to 2>;
+
+            label = "NEW_MACRO";
         };
     };
 
