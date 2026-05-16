@@ -79,7 +79,7 @@
 &trans  &trans             &trans                  &trans            &trans                   &trans                                 &trans         &trans       &trans    &trans         &trans         &trans
 &trans  &kp LC(MINUS)      &kp LG(LC(LEFT_ARROW))  &kp LG(UP_ARROW)  &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(F4))                         &kp HOME       &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp BACKSPACE  &trans
 &trans  &kp LC(SEMICOLON)  &kp LG(LEFT)            &kp LG(DOWN)      &kp LG(RIGHT)            &kp LC(LG(D))   &trans  &trans         &kp END        &kp LEFT     &kp DOWN  &kp RIGHT      &kp DELETE     &trans
-&trans  &trans             &trans                  &trans            &trans                   &kp LG(TAB)     &trans  &kp LG(LS(S))  &kp LS(LG(S))  &trans       &trans    &trans         &trans         &trans
+&trans  &trans             &kp LS(LC(TAB))         &trans            &kp LC(TAB)              &kp LG(TAB)     &trans  &kp LG(LS(S))  &kp LS(LG(S))  &trans       &trans    &trans         &trans         &trans
 &trans  &trans             &trans                  &trans            &trans                   &trans          &trans  &kp DEL        &trans         &trans       &trans    &trans         &trans         &trans
             >;
         };
