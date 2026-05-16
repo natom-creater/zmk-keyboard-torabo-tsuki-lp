@@ -31,11 +31,20 @@
     // 3. macros ブロック
 
     macros {
-        win_shift_s: win_shift_s {
+        BT4_lay2: BT5_lay3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp LEFT_SHIFT &kp S>;
-            label = "WIN_SHIFT_S";
+            bindings = <&bt BT_SEL 4>, <&macro_wait_time 200>, <&to 2>;
+
+            label = "BT5_LAY3";
+        };
+
+        BT0_lay0: BT0_layer0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&macro_wait_time 200>, <&to 0>;
+
+            label = "BT0_LAYER0";
         };
     };
 
