@@ -67,7 +67,7 @@
         pad_base {
             bindings = <
 &trans  &trans            &trans      &trans            &trans                 &trans                                      &trans       &trans  &trans     &trans        &trans                &trans
-&trans  &mt ESC Q         &mt C_PP W  &mt LA(C_MUTE) E  &mt C_VOL_DN R         &mt C_VOL_UP T                              &kp Y        &kp U   &kp I      &kp O         &mt LEFT_BRACKET P    &trans
+&trans  &mt ESC Q         &mt C_PP W  &mt LA(C_MUTE) E  &mt C_VOL_DN R         &mt C_VOL_UP T                              &kp Y        &kp U   &kp I      &kp O         &mt AT_SIGN P         &trans
 &trans  &kp A             &kp S       &kp D             &kp F                  &kp G           &trans       &trans         &kp H        &kp J   &kp K      &kp L         &mt SEMICOLON MINUS   &trans
 &trans  &mt LEFT_SHIFT Z  &kp X       &kp C             &kp V                  &kp B           &kp TAB      &kp B          &kp N        &kp M   &kp COMMA  &kp DOT       &mt RIGHT_SHIFT FSLH  &trans
 &trans  &kp LCTRL         &kp LGUI    &kp LALT          &lt 6 INTERNATIONAL_5  &lt 4 SPACE     &lt 5 GRAVE  &kp BACKSPACE  &lt 1 ENTER  &trans  &trans     &lt 4 ESCAPE  &kp RIGHT_CONTROL     &trans
@@ -76,11 +76,11 @@
 
         pad_sign {
             bindings = <
-&trans  &trans                 &trans             &trans            &trans                &trans                  &trans  &trans                 &trans             &trans                   &trans         &trans
-&trans  &kp RIGHT_PARENTHESIS  &trans             &trans            &trans                &trans                  &trans  &kp RIGHT_BRACKET      &kp BACKSLASH      &trans                   &trans         &trans
-&trans  &kp LS(N5)             &kp AMPERSAND      &kp SQT           &kp LEFT_PARENTHESIS  &trans  &trans  &trans  &trans  &kp LS(N8)             &kp LS(N9)         &kp RS(INTERNATIONAL_1)  &kp SEMICOLON  &trans
-&trans  &kp LS(NUMBER_1)       &kp DOUBLE_QUOTES  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)      &trans  &trans  &trans  &trans  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &kp EQUAL                &trans         &trans
-&trans  &trans                 &trans             &trans            &trans                &trans  &trans  &trans  &trans  &trans                 &trans             &trans                   &trans         &trans
+&trans  &trans                 &trans             &trans            &trans                &trans                  &trans  &trans                &trans                 &trans          &trans         &trans
+&trans  &kp RIGHT_PARENTHESIS  &trans             &trans            &trans                &trans                  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans          &trans         &trans
+&trans  &kp LS(N5)             &kp AMPERSAND      &kp SQT           &kp LEFT_PARENTHESIS  &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp SEMICOLON  &trans
+&trans  &kp LS(NUMBER_1)       &kp DOUBLE_QUOTES  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)      &trans  &trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp CARET       &trans         &trans
+&trans  &trans                 &trans             &trans            &trans                &trans  &trans  &trans  &trans  &trans                &trans                 &trans          &trans         &trans
             >;
         };
 
