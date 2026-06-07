@@ -32,3 +32,9 @@
 &size_s_transform { col-offset = <7>; };
 &size_m_transform { col-offset = <7>; };
 &size_l_transform { col-offset = <7>; };
+
+&automouse_layer {
+    /* 誤爆を防ぐための強力なフィルター設定 */
+    msecs = <100>;          // ボールが動いてからレイヤーを切り替えるまでの猶予（少し長めに）
+    min-distance = <10>;    // 【重要】これ以下の小さな動きは微振動とみなして無視する（値を大きくするとより頑丈になります）
+};
