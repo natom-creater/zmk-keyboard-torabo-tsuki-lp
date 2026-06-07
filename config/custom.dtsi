@@ -43,18 +43,4 @@
             bindings = <&mo>, <&kp>;
         };
     };
-
-    /* 
-     * 【左右ビルドエラー対策】
-     * ルートノード直下からトラックボール設定をオーバーライドします。
-     * これにより、トラックボールの実体がない左手側のビルドでもエラーで落ちなくなります。
-     */
-    trackball_override {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        
-        /* ここでハードウェア感度（CPI）を上書き */
-        /delete-property/ cpi;
-        cpi = <400>; 
-    };
 };
