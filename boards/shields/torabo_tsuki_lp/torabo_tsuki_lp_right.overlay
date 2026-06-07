@@ -28,13 +28,7 @@
     >;
 };
 
-/* 3. トラックボールのハードウェア解像度（CPI）をここで上書き */
-&trackball {
-    /delete-property/ cpi;
-    cpi = <400>; /* 微振動を拾いにくくするために感度を下げる */
-};
-
-/* 4. 既存のレイアウト変換設定（維持） */
+/* 3. 既存のレイアウト変換設定（維持） */
 &size_s_transform { col-offset = <7>; };
 &size_m_transform { col-offset = <7>; };
 &size_l_transform { col-offset = <7>; };
