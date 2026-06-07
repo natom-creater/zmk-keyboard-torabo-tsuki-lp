@@ -18,11 +18,9 @@
         <&zip_temp_layer 7 2000>;
 };
 
-/* 2. オートマウス除外キー設定 ＋ ★感度調整★ */
+/* 2. オートマウス除外キー設定 */
 &zip_temp_layer {
-    /* ここを追記：タイピングの微振動（12カウント未満の動き）を無視する */
-    trigger-threshold = <12>; 
-
+    /* trigger-threshold の行を削除 */
     excluded-positions = <
         18 19 20 21 22
         32 33 34 35 36
