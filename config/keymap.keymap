@@ -136,7 +136,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                     &trans     &trans       &trans     &trans         &trans          &trans
 &trans  &trans  &trans  &trans  &trans  &trans                     &mkp MB4   &kp PAGE_UP  &trans     &kp PAGE_DOWN  &kp LC(MINUS)   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MB5   &mkp MB1     &mkp MB3   &mkp MB2       &lt 5 LC(SEMI)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(A)  &kp LC(C)  &kp LC(T)    &kp LC(V)  &kp ENTER      &kp LC(W)       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(A)  &kp LC(C)  &kp LC(T)    &kp LC(V)  &kp LS(LC(T))  &kp LC(W)       &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans       &trans     &kp LS(LC(T))  &trans          &trans
             >;
         };
