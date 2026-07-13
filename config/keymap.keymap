@@ -26,6 +26,11 @@
             bindings = <&kp DELETE>;
             key-positions = <22 21>;
         };
+
+        capslock {
+            bindings = <&kp GRAVE>;
+            key-positions = <25 26>;
+        };
     };
 
     // 3. macros ブロック
